@@ -53,7 +53,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   colorBlock: {
-    background: "linear-gradient(to left, #12c2e9, #c471ed, #f64f59)",
+    background: "linear-gradient(to top, #12c2e9, #c471ed, #f64f59)",
     height: "16em",
     width: "0.35em",
     margin: "auto 0",
