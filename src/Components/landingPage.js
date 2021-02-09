@@ -312,7 +312,7 @@ const useStyles = makeStyles((theme) => ({
   story1: {
     backgroundImage: "url(" + mountains + ")",
     backgroundRepeat: "no-repeat",
-    backgroundSize: "cover",
+    backgroundSize: "100% 100%, cover",
 
     height: "30em",
     width: "25%",
@@ -327,7 +327,8 @@ const useStyles = makeStyles((theme) => ({
   story2: {
     backgroundImage: "url(" + cityscapes + ")",
     backgroundRepeat: "no-repeat",
-    backgroundSize: "cover",
+    backgroundSize: "100% 100%, cover",
+
 
     height: "30em",
     width: "25%",
@@ -341,7 +342,8 @@ const useStyles = makeStyles((theme) => ({
   story3: {
     backgroundImage: "url(" + voyage + ")",
     backgroundRepeat: "no-repeat",
-    backgroundSize: "cover",
+    backgroundSize: "100% 100%, cover",
+
     height: "30em",
     width: "25%",
     "&:hover": {
@@ -354,6 +356,8 @@ const useStyles = makeStyles((theme) => ({
   story4: {
     backgroundImage: "url(" + architecturals + ")",
     backgroundRepeat: "no-repeat",
+    backgroundSize: "100% 100%, cover",
+
     height: "30em",
     width: "25%",
     "&:hover": {
