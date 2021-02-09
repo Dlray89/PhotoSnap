@@ -58,8 +58,10 @@ const useStyles = makeStyles((theme) => ({
     width: "0.35em",
     margin: "auto 0",
     [theme.breakpoints.down("sm")]: {
-      height: "0.55em",
+        background: "linear-gradient(to left, #12c2e9, #c471ed, #f64f59)",
+      height: "0.45em",
       width: "40%",
+      marginLeft:"5em"
     },
   },
   HeroCard: {
