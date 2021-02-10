@@ -105,7 +105,7 @@ const useStyles = makeStyles((theme) => ({
 const Navigation = () => {
   const classes = useStyles();
   // const [open, setOpen] = useState(false);
-  const [toggleNav, setToggleNav] = useState()
+  const [toggleNav, setToggleNav] = useState(false)
   const theme = useTheme()
   const matchSM = useMediaQuery(theme.breakpoints.down('sm'))
 
@@ -173,9 +173,9 @@ const Navigation = () => {
             </Grid>
 
             <Grid  item container direction='column' justify='space-between' alignItems='center' style={{ position:'absolute', bottom:'-10em', left:'0%', width:'100%',  background:'#eeeff4', height:'10em'}} >         
-            <Grid  item component={Link} style={{textDecoration:'none', color:'black'}} to='/stories' >Stories</Grid>
-             <Grid  item  component={Link} style={{textDecoration:'none', color:'black'}} to='/features'>Features</Grid>
-             <Grid  item component={Link} style={{textDecoration:'none', color:'black'}} to='/pricing' >Pricing</Grid>
+            <Grid  item component={Link} style={{textDecoration:'none', color:'black'}} to='/stories' onClick={toggleNavClose} >Stories</Grid>
+             <Grid  item  component={Link} style={{textDecoration:'none', color:'black'}} to='/features' onClick={toggleNavClose}>Features</Grid>
+             <Grid  item component={Link} style={{textDecoration:'none', color:'black'}} to='/pricing' onClick={toggleNavClose}>Pricing</Grid>
             <Grid  item  className={classes.menuButtonContainer} ><Button className={classes.menuNavButton} variant='contained'>Get an invite</Button></Grid>
         
             
@@ -202,7 +202,7 @@ const Navigation = () => {
             justify={matchSM ? 'space-between' : "space-evenly"}
             alignItems="center"
           >
-            <Grid component={Link} to='/' item container className={classes.logoContainer}>
+            <Grid component={Link} to='/' item container className={classes.logoContainer} onClick={toggleNavClose}>
               <img
                 className={classes.Logo}
                 alt="logo of photosnap"
