@@ -49,7 +49,7 @@ const useStyles = makeStyles((theme) => ({
       backgroundSize: "100% 100%, cover",
       width: "100%",
       marginRight: "auto",
-      height: "20em",
+      height: "25em",
     },
   },
   colorBlock: {
@@ -150,7 +150,7 @@ const useStyles = makeStyles((theme) => ({
       backgroundImage: "url(" + beautifulMobile + ")",
       backgroundSize: "100% 100%, cover",
       marginRight: "auto",
-      height: "20em",
+      height: "25em",
     },
   },
   beautifulCard: {
@@ -239,7 +239,7 @@ const useStyles = makeStyles((theme) => ({
       backgroundRepeat: "no-repeat",
       backgroundSize: "100% 100%, cover",
       marginRight: "auto",
-      height: "20em",
+      height: "25em",
     },
   },
   DesignedCard: {

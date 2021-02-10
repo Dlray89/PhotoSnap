@@ -5,6 +5,7 @@ import Navigation from './Components/UI/navigation'
 import Footer from './Components/UI/footer'
 import LandingPage from './Components/landingPage'
 import './App.css';
+import StoriesPage from './Components/stories'
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
       <Navigation />
       <Switch>
         <Route exact path='/' render={() => <LandingPage />} />
-        <Route exact path='/stories' component={() => <div>Stories</div>} />
+        <Route exact path='/stories' render={() => <StoriesPage />} />
       </Switch>
       <Footer />
     </div>
