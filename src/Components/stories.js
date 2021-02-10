@@ -161,6 +161,7 @@ const useStyles = makeStyles((theme) => ({
     width: "25%",
     height: "31em",
     backgroundRepeat: "no-repeat",
+    backgroundSize:'100% 100%, cover',
     "&:hover": {
       marginTop: "-1em",
       borderBottom: "solid 4px transparent",
