@@ -119,7 +119,7 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "left",
     marginRight: "2em",
     [theme.breakpoints.down('sm')]:{
-        
+        opacity:'60%'
     }
   },
   heroBoxThreeAuthor: {},
