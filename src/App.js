@@ -4,17 +4,18 @@ import { Switch, Route} from 'react-router-dom'
 import Navigation from './Components/UI/navigation'
 import Footer from './Components/UI/footer'
 import LandingPage from './Components/landingPage'
-import './App.css';
 import StoriesPage from './Components/stories'
+import Features from './Components/Features'
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
-    <div className="App">
+    <div>
       <Navigation />
       <Switch>
         <Route exact path='/' render={() => <LandingPage />} />
         <Route exact path='/stories' render={() => <StoriesPage />} />
+        <Route exact path='/features' render={() => <Features />} />
       </Switch>
       <Footer />
     </div>

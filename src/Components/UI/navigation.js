@@ -139,7 +139,7 @@ const Navigation = () => {
         <Grid item component={Link} to='/stories' className={classes.links}>
           Stories
         </Grid>
-        <Grid item component={Link} className={classes.links}>
+        <Grid item component={Link} to='/features' className={classes.links}>
           Features
         </Grid>
         <Grid item component={Link} className={classes.links}>

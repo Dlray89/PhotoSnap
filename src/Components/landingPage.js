@@ -81,9 +81,11 @@ const useStyles = makeStyles((theme) => ({
     color: "white",
     textAlign: "left",
     margin: "0 auto",
-    fontSize: "2.3em",
-    width: "50%",
+    fontSize: "3.5em",
+    width: "90%",
     marginBottom: "0.35em",
+    
+    marginTop:'1em',
     [theme.breakpoints.down("md")]: {
       fontSize: "3em",
       width: "60%",
@@ -100,8 +102,8 @@ const useStyles = makeStyles((theme) => ({
     color: "white",
     textAlign: "left",
     margin: "0 auto",
-    width: "50%",
-    fontSize: "0.82em",
+    width: "90%",
+    fontSize: "1.2em",
     marginBottom: "2em",
     [theme.breakpoints.down("md")]: {
       fontSize: "1.1em",
@@ -170,9 +172,10 @@ const useStyles = makeStyles((theme) => ({
     color: "black",
     textAlign: "left",
     margin: "0 auto",
-    fontSize: "3em",
-    width: "62%",
+    fontSize: "4em",
+    width: "90%",
     marginBottom: "0.35em",
+    
     [theme.breakpoints.down("md")]: {
       fontSize: "3em",
       width: "60%",
@@ -191,8 +194,8 @@ const useStyles = makeStyles((theme) => ({
     color: "black",
     textAlign: "left",
     margin: "0 auto",
-    width: "62%",
-    fontSize: "0.82em",
+    width: "90%",
+    fontSize: "1.2em",
     marginBottom: "2em",
     [theme.breakpoints.down("md")]: {
       fontSize: "1.1em",
@@ -259,9 +262,10 @@ const useStyles = makeStyles((theme) => ({
     color: "black",
     textAlign: "left",
     margin: "0 auto",
-    fontSize: "2.3em",
-    width: "50%",
+    fontSize: "4em",
+    width: "90%",
     marginBottom: "0.35em",
+    
     [theme.breakpoints.down("md")]: {
       fontSize: "3em",
       width: "55%",
@@ -279,9 +283,10 @@ const useStyles = makeStyles((theme) => ({
     color: "black",
     textAlign: "left",
     margin: "0 auto",
-    width: "50%",
-    fontSize: "0.82em",
+    width: "90%",
+    fontSize: "1.2em",
     marginBottom: "2em",
+    lineHeight:1.5,
     [theme.breakpoints.down("md")]: {
       fontSize: "1em",
     },
