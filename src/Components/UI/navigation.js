@@ -173,9 +173,9 @@ const Navigation = () => {
             </Grid>
 
             <Grid  item container direction='row' style={{ position:'absolute', bottom:'-9.1em', left:'0%', width:'100%',  background:'#eeeff4'}} >         
-            <Grid  item container direction='row'component={Button} >Stories</Grid>
-             <Grid  item container direction='row' component={Button}>Features</Grid>
-             <Grid  item container direction='row'component={Button} >Pricing</Grid>
+            <Grid  item container direction='row'component={Link} to='/stories' >Stories</Grid>
+             <Grid  item container direction='row' component={Link} to='/features'>Features</Grid>
+             <Grid  item container direction='row'component={Link} to='/pricing' >Pricing</Grid>
             <Grid  item container direction='row' className={classes.menuButtonContainer} ><Button className={classes.menuNavButton} variant='contained'>Get an invite</Button></Grid>
         
             
