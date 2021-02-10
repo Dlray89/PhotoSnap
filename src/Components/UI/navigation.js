@@ -172,11 +172,11 @@ const Navigation = () => {
                 </Grid>
             </Grid>
 
-            <Grid  item container direction='row' style={{ position:'absolute', bottom:'-9.1em', left:'0%', width:'100%',  background:'#eeeff4'}} >         
-            <Grid  item container direction='row'component={Link} to='/stories' >Stories</Grid>
-             <Grid  item container direction='row' component={Link} to='/features'>Features</Grid>
-             <Grid  item container direction='row'component={Link} to='/pricing' >Pricing</Grid>
-            <Grid  item container direction='row' className={classes.menuButtonContainer} ><Button className={classes.menuNavButton} variant='contained'>Get an invite</Button></Grid>
+            <Grid  item container direction='column' justify='space-between' alignItems='center' style={{ position:'absolute', bottom:'-10em', left:'0%', width:'100%',  background:'#eeeff4', height:'10em'}} >         
+            <Grid  item component={Link} style={{textDecoration:'none', color:'black'}} to='/stories' >Stories</Grid>
+             <Grid  item  component={Link} style={{textDecoration:'none', color:'black'}} to='/features'>Features</Grid>
+             <Grid  item component={Link} style={{textDecoration:'none', color:'black'}} to='/pricing' >Pricing</Grid>
+            <Grid  item  className={classes.menuButtonContainer} ><Button className={classes.menuNavButton} variant='contained'>Get an invite</Button></Grid>
         
             
             
