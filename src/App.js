@@ -6,6 +6,7 @@ import Footer from './Components/UI/footer'
 import LandingPage from './Components/landingPage'
 import StoriesPage from './Components/stories'
 import Features from './Components/Features'
+import Pricing from './Components/Pricing'
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route exact path='/' render={() => <LandingPage />} />
         <Route exact path='/stories' render={() => <StoriesPage />} />
         <Route exact path='/features' render={() => <Features />} />
+        <Route exact path='/pricing' render={() => <Pricing />} />
       </Switch>
       <Footer />
     </div>

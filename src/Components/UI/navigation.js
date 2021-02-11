@@ -142,7 +142,7 @@ const Navigation = () => {
         <Grid item component={Link} to='/features' className={classes.links}>
           Features
         </Grid>
-        <Grid item component={Link} className={classes.links}>
+        <Grid item component={Link} to='/pricing' className={classes.links}>
           Pricing
         </Grid>
       </Grid>

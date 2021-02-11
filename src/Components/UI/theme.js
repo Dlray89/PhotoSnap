@@ -1,9 +1,10 @@
 import { createMuiTheme} from '@material-ui/core'
 
-// const mainAccent = ''
+const mainAccent = '#c471ed'
+// 'linear-gradient(to left, #12c2e9, #c471ed, #f64f59)
 const pureBlack = '#000000'
 // const lightGrey = '#dfdfdf'
-const pureWhite = '#ffffff'
+// const pureWhite = '#ffffff'
 
 
 export default createMuiTheme({
@@ -12,7 +13,7 @@ export default createMuiTheme({
             main:pureBlack
         },
         secondary:{
-                main: pureWhite
+                main: mainAccent
         }
     },
     typography:{
