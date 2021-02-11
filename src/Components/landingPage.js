@@ -42,6 +42,8 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "black",
     [theme.breakpoints.down("md")]: {
       backgroundSize: "40% 100%, cover",
+      height:'25em'
+
     },
     [theme.breakpoints.down("sm")]: {
       background: "url(" + HeroCardMobile + ")",
@@ -92,7 +94,7 @@ const useStyles = makeStyles((theme) => ({
       [theme.breakpoints.down("sm")]: {
         width: "65%",
         margin: "0 auto",
-        fontSize: "2.8em",
+        fontSize: "2.4em",
         marginBottom: "0.25em",
         marginTop: "2em",
       },
@@ -147,6 +149,8 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "white",
     [theme.breakpoints.down("md")]: {
       backgroundSize: "40% 100%, cover",
+      height:'25em'
+
     },
     [theme.breakpoints.down("sm")]: {
       backgroundImage: "url(" + beautifulMobile + ")",
@@ -183,7 +187,7 @@ const useStyles = makeStyles((theme) => ({
       [theme.breakpoints.down("sm")]: {
         width: "70%",
         margin: "0 auto",
-        fontSize: "2.8em",
+        fontSize: "2.5em",
         marginBottom: "0.25em",
         marginTop: "1em",
         textAlign: "left",
@@ -236,6 +240,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "white",
     [theme.breakpoints.down("md")]: {
       backgroundSize: "45% 100%,  cover",
+      height:'25em'
     },
     [theme.breakpoints.down("sm")]: {
       background: "url(" + designedMobile + ")",
@@ -273,7 +278,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("sm")]: {
       width: "70%",
       margin: "0 auto",
-      fontSize: "2.8em",
+      fontSize: "2.5em",
       marginBottom: "0.25em",
       marginTop: "1em",
       textAlign: "left",
@@ -440,13 +445,34 @@ const useStyles = makeStyles((theme) => ({
       width: "100%",
     },
     [theme.breakpoints.down("sm")]: {
-      
+      height:'14em'
+
     },
   },
-  featureLogoContainer: {},
+  featureLogoContainer: {
+    [theme.breakpoints.down('sm')]:{
+      textAlign:'center',
+      width:'100%',
+      
+    }
+  },
   featureLogo: {},
-  featureTitle: {},
-  featureSubtitle: {},
+  featureTitle: {
+    [theme.breakpoints.down('sm')]:{
+      textAlign:'center',
+      width:'100%',
+      
+    }
+  },
+  featureSubtitle: {
+   [theme.breakpoints.down('md')]:{
+    width:'70%',
+    textAlign:'center',
+    margin:'0 auto'
+
+   }
+
+  },
   tabletStoryContainer: {
     marginTop: "-1.7em",
     [theme.breakpoints.down("sm")]: {

@@ -32,7 +32,8 @@ const useStyles = makeStyles((theme) => ({
     color: "black",
     width: "15%",
     [theme.breakpoints.down('sm')]:{
-        width:'45%'
+        width:'45%',
+        marginLeft:'3em'
     }
   },
   Logo: {
