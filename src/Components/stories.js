@@ -7,6 +7,7 @@ import {
 //   useMediaQuery,
   Hidden,
 } from "@material-ui/core";
+import ArrowRightAltIcon from '@material-ui/icons/ArrowRightAlt';
 
 import voyage from "../assets/stories/desktop/18-days-voyage.jpg";
 import architecturals from "../assets/stories/desktop/architecturals.jpg";
@@ -153,6 +154,9 @@ const useStyles = makeStyles((theme) => ({
   },
   heroBoxButton: {
     color: "white",
+    "&:hover": {
+        textDecoration: "underline",
+      },
     [theme.breakpoints.down('sm')]:{
         opacity:'60%'
     }
@@ -538,7 +542,7 @@ const StoriesPage = () => {
         </Grid>
 
         <Grid item className={classes.heroBoxFive}>
-          <Button className={classes.heroBoxButton}>Read the Story</Button>
+          <Button className={classes.heroBoxButton}>Read the Story <ArrowRightAltIcon /></Button>
         </Grid>
       </Hidden>
       </Grid>  

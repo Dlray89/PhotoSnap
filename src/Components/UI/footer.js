@@ -2,12 +2,14 @@ import React from 'react';
 import {Link } from 'react-router-dom'
 import {makeStyles, Grid, Button, Hidden, useTheme, useMediaQuery} from '@material-ui/core'
 import Logo from '../../assets/shared/desktop/logoWhite.svg'
+import ArrowRightAltIcon from '@material-ui/icons/ArrowRightAlt';
 
 import Facebook from '../../assets/shared/desktop/facebook.svg'
 import Instagram from '../../assets/shared/desktop/instagram.svg'
 import Pinterest from '../../assets/shared/desktop/pinterest.svg'
 import Twitter from '../../assets/shared/desktop/twitter.svg'
 import Youtube from '../../assets/shared/desktop/youtube.svg'
+import ArrowRightAlt from '@material-ui/icons/ArrowRightAlt';
 
 const useStyles = makeStyles((theme) => ({
     footer:{
@@ -103,7 +105,9 @@ const useStyles = makeStyles((theme) => ({
         }
     },
     footerButton:{
-        color:'white'
+        color:'white',"&:hover": {
+            textDecoration: "underline",
+          },
     },
     footerCopyright:{
         width:'70%',
@@ -214,7 +218,7 @@ const Footer = () => {
 
             <Grid item container direction='column' justify='space-evenly' alignItems={matchSM ? 'center':'flex-end'} className={classes.secondContainer}>
                 <Grid item className={classes.footerButtonContainer}>
-                    <Button className={classes.footerButton}>Get an Invite</Button>
+                    <Button className={classes.footerButton}>Get an Invite <ArrowRightAlt /></Button>
                 </Grid>
 
                 <Grid item className={classes.footerCopyright}>

@@ -30,6 +30,7 @@ import mountainsMobile from "../assets/stories/mobile/mountains.jpg";
 import cityscapesMobile from "../assets/stories/mobile/cityscapes.jpg";
 import voyageMobile from "../assets/stories/mobile/18-days-voyage.jpg";
 import architecturalsMobile from "../assets/stories/mobile/architecturals.jpg";
+import ArrowRightAlt from "@material-ui/icons/ArrowRightAlt";
 
 const useStyles = makeStyles((theme) => ({
   landingPage: {},
@@ -119,7 +120,8 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   heroCardButtonContainer: {
-    marginLeft: "8em",
+    marginLeft: "1.2em",
+    textAlign:'left',
     [theme.breakpoints.down("md")]: {
       width: "60%",
 
@@ -214,7 +216,8 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   beautifulButtonCard: {
-    marginRight: "18em",
+    marginRight: "15em",
+    width:'50%',
     [theme.breakpoints.down("md")]: {
       width: "70%",
       margin: "0 auto",
@@ -227,6 +230,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   beautifulButton: {
+    width:'75%',
     "&:hover": {
       textDecoration: "underline",
     },
@@ -303,7 +307,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   designedButtonContainer: {
-    marginLeft: "8em",
+    marginLeft: "1.2em",
     [theme.breakpoints.down("md")]: {
       margin: "0 auto",
       width: "50%",
@@ -859,7 +863,7 @@ const LandingPage = () => {
               others.
             </Grid>
             <Grid item className={classes.heroCardButtonContainer}>
-              <Button className={classes.heroCardButton}>Get an invite</Button>
+              <Button className={classes.heroCardButton}>Get an invite <ArrowRightAlt /></Button>
             </Grid>
           </Grid>
         </Hidden>
@@ -886,7 +890,7 @@ const LandingPage = () => {
             others.
           </Grid>
           <Grid item className={classes.heroCardButtonContainer}>
-            <Button className={classes.heroCardButton}>Get an invite</Button>
+            <Button className={classes.heroCardButton}>Get an invite <ArrowRightAlt /></Button>
           </Grid>
         </Grid>
       </Hidden>
@@ -912,7 +916,7 @@ const LandingPage = () => {
 
             <Grid item className={classes.beautifulButtonCard}>
               <Button className={classes.beautifulButton}>
-                View the stories
+                View the stories <ArrowRightAlt />
               </Button>
             </Grid>
           </Grid>
@@ -939,7 +943,7 @@ const LandingPage = () => {
 
           <Grid item className={classes.beautifulButtonCard}>
             <Button className={classes.beautifulButton}>
-              View the stories
+              View the stories <ArrowRightAlt />
             </Button>
           </Grid>
         </Grid>
@@ -966,7 +970,7 @@ const LandingPage = () => {
             <Grid item className={classes.designedButtonContainer}>
               <Button className={classes.designedButton}>
                 {" "}
-                View the stories
+                View the stories <ArrowRightAlt />
               </Button>
             </Grid>
           </Grid>

@@ -12,6 +12,7 @@ import responsive from "../assets/features/desktop/responsive.svg";
 
 import weInBeta from '../assets/shared/desktop/bg-beta.jpg'
 import weInBetaMobile from '../assets/shared/mobile/bg-beta.jpg'
+import ArrowRightAlt from "@material-ui/icons/ArrowRightAlt";
 
 const features = [
   {
@@ -166,6 +167,9 @@ const useStyles = makeStyles((theme) => ({
     backgroundSize:'100% 100%, cover',
     width:'100%',
     height:'20em',
+    borderLeft: "solid 4px transparent",
+    borderImage: "linear-gradient(to top, #12c2e9, #c471ed, #f64f59)",
+    borderImageSlice: 1,
     [theme.breakpoints.down('sm')]:{
         backgroundImage:'url(' + weInBetaMobile +')',
     backgroundRepeat:'no-repeat',
@@ -195,6 +199,9 @@ const useStyles = makeStyles((theme) => ({
   wereInBetaButton:{
     color:'white',
     fontSize:'1.1em',
+    "&:hover": {
+      textDecoration: "underline",
+    },
     
   }
 
@@ -265,7 +272,7 @@ const Features = () => {
           </Grid>
 
           <Grid item className={classes.wereInBetaButtonContainer}>
-              <Button className={classes.wereInBetaButton}>Get an invite</Button>
+              <Button className={classes.wereInBetaButton}>Get an invite <ArrowRightAlt /></Button>
           </Grid>
 
       </Grid>

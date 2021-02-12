@@ -8,13 +8,22 @@ import {
   useTheme,
   useMediaQuery,
   Hidden,
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableHead,
+  TableRow,
+  Paper,
 } from "@material-ui/core";
 import React, { useState } from "react";
+import ArrowRightAltIcon from '@material-ui/icons/ArrowRightAlt';
 import heroImg from "../assets/pricing/desktop/hero.jpg";
 import heroImgTablet from "../assets/pricing/tablet/hero.jpg";
 import heroImgMobile from "../assets/pricing/mobile/hero.jpg";
 import weInBeta from "../assets/shared/desktop/bg-beta.jpg";
 import weInBetaMobile from "../assets/shared/mobile/bg-beta.jpg";
+import Check from "../assets/pricing/desktop/check.svg";
 
 const useStyles = makeStyles((theme) => ({
   pricing: {},
@@ -48,9 +57,9 @@ const useStyles = makeStyles((theme) => ({
       width: "69%",
       margin: "auto 0",
     },
-    [theme.breakpoints.down('sm')]:{
-        width:'100%'
-    }
+    [theme.breakpoints.down("sm")]: {
+      width: "100%",
+    },
   },
   heroTitle: {
     color: "white",
@@ -65,7 +74,7 @@ const useStyles = makeStyles((theme) => ({
       marginTop: "0.55em",
       marginLeft: "0.33em",
       width: "95%",
-      textAlign:'center'
+      textAlign: "center",
     },
   },
   heroSubTitle: {
@@ -80,9 +89,9 @@ const useStyles = makeStyles((theme) => ({
       width: "90%",
       marginLeft: "1em",
       marginBottom: "3em",
-      textAlign:'center',
-      fontSize:'1em',
-      margin:'0 auto'
+      textAlign: "center",
+      fontSize: "1em",
+      margin: "0 auto",
     },
   },
   colorBlock: {
@@ -103,9 +112,9 @@ const useStyles = makeStyles((theme) => ({
   switch: {
     width: "40%",
     margin: "2em auto",
-    [theme.breakpoints.down('sm')]:{
-        width:'59%'
-    }
+    [theme.breakpoints.down("sm")]: {
+      width: "59%",
+    },
   },
   plans: {
     marginBottom: "10em",
@@ -174,6 +183,9 @@ const useStyles = makeStyles((theme) => ({
     backgroundSize: "100% 100%, cover",
     width: "100%",
     height: "20em",
+    borderLeft: "solid 4px transparent",
+    borderImage: "linear-gradient(to top, #12c2e9, #c471ed, #f64f59)",
+    borderImageSlice: 1,
     [theme.breakpoints.down("sm")]: {
       backgroundImage: "url(" + weInBetaMobile + ")",
       backgroundRepeat: "no-repeat",
@@ -202,6 +214,10 @@ const useStyles = makeStyles((theme) => ({
   wereInBetaButton: {
     color: "white",
     fontSize: "1.1em",
+    "&:hover": {
+        textDecoration: "underline",
+      },
+   
   },
   tabletPlans: {
     width: "90%",
@@ -261,10 +277,9 @@ const useStyles = makeStyles((theme) => ({
   mobilePlans: {
     marginBottom: "10em",
     marginTop: "4em",
-    margin:'0 auto',
-    
-    width:'100%'
+    margin: "0 auto",
 
+    width: "100%",
   },
   mobilePlanContainer: {
     background: "black",
@@ -275,12 +290,11 @@ const useStyles = makeStyles((theme) => ({
     borderImage: "linear-gradient(to left, #12c2e9, #c471ed, #f64f59)",
     borderImageSlice: 1,
     boxShadow: "5px 7px 5px grey",
-    marginBottom:'2em',
-    marginLeft:'1.5em'
+    marginBottom: "2em",
+    marginLeft: "1.5em",
   },
   mobilePlanTitle: {
     color: "white",
-
 
     textAlign: "center",
     marginTop: "1em",
@@ -321,6 +335,21 @@ const useStyles = makeStyles((theme) => ({
       color: "white",
     },
   },
+  tableContainer:{
+      width:'50%',
+      marginBottom:'6em',
+      borderBottom: "solid 4px transparent",
+      borderTop: "solid 4px transparent",
+      borderImage: "linear-gradient(to left, #12c2e9, #c471ed, #f64f59)",
+      borderImageSlice: 1,
+      [theme.breakpoints.down('sm')]:{
+          width:'90%'
+      }
+  },
+  tableTitle:{
+      fontSize:'3em',
+      marginBottom:'0.55em'
+  }
 }));
 
 const plans = [
@@ -354,6 +383,21 @@ const plans = [
     perMonth: "per month",
     perYearly: "per year",
   },
+];
+
+function createData(name, Basic, Pro, Business) {
+  return { name, Basic, Pro, Business };
+}
+
+const rows = [
+  createData("Unlimited Story posting", Check, Check, Check),
+  createData("Unlimited Photo Upload", Check, Check, Check),
+  createData("Embedding Custom Content", "", Check, Check),
+  createData("Customize Metadata", "", Check, Check),
+  createData("Advance Metrics", "", "", Check),
+  createData("Photo Downloads", "", "", Check),
+  createData("Search Engine Indexing", "", "", Check),
+  createData("Custom Analytics", "", "", Check),
 ];
 
 const Pricing = () => {
@@ -395,21 +439,16 @@ const Pricing = () => {
       </Grid>
 
       <Hidden mdUp>
-      <Grid
-            item
-            container
-            direction="column"
-            className={classes.heroDetails}
-          >
-            <Grid item className={classes.heroTitle}>
-              Pricing
-            </Grid>
-            <Grid item className={classes.heroSubTitle}>
-              Create a your stories, Photosnap is a platform for photographers
-              and visual storytellers. It’s the simple way to create and share
-              your photos.
-            </Grid>
+        <Grid item container direction="column" className={classes.heroDetails}>
+          <Grid item className={classes.heroTitle}>
+            Pricing
           </Grid>
+          <Grid item className={classes.heroSubTitle}>
+            Create a your stories, Photosnap is a platform for photographers and
+            visual storytellers. It’s the simple way to create and share your
+            photos.
+          </Grid>
+        </Grid>
       </Hidden>
       <Grid item>
         <FormGroup className={classes.switch}>
@@ -489,7 +528,7 @@ const Pricing = () => {
 
       {/* tablet plans container */}
 
-      <Hidden smDown  lgUp>
+      <Hidden smDown lgUp>
         <Grid
           item
           container
@@ -602,12 +641,55 @@ const Pricing = () => {
               )}
 
               <Grid item className={classes.mobilePlanButtoneCOntainer}>
-                <Button className={classes.mobilePlanButton}>Pick a plan</Button>
+                <Button className={classes.mobilePlanButton}>
+                  Pick a plan
+                </Button>
               </Grid>
             </Grid>
           ))}
         </Grid>
       </Hidden>
+
+      <Grid
+        item
+        container
+        direction="column"
+        alignItems="center"
+        justify="center"
+      >
+        <Grid item className={classes.tableTitle}>Compare</Grid>
+
+        <TableContainer component={Paper} className={classes.tableContainer}>
+          <Table className={classes.table}>
+            <TableHead className={classes.tableHead}>
+              <TableRow>
+                <TableCell align="left">The Features</TableCell>
+                <TableCell align="center">Basic</TableCell>
+                <TableCell align="center">Pro</TableCell>
+                <TableCell align="center">Business</TableCell>
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              {rows.map((row) => (
+                <TableRow>
+                  <TableCell align="left" key={row.name}>
+                    {row.name}
+                  </TableCell>
+                  <TableCell align="center">
+                    <img src={row.Basic} alt='' />
+                  </TableCell>
+                  <TableCell align="center">
+                    <img src={row.Pro} alt='' />
+                  </TableCell>
+                  <TableCell align="center">
+                    <img src={row.Business} alt='' />
+                  </TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </TableContainer>
+      </Grid>
 
       <Grid
         item
@@ -621,7 +703,7 @@ const Pricing = () => {
         </Grid>
 
         <Grid item className={classes.wereInBetaButtonContainer}>
-          <Button className={classes.wereInBetaButton}>Get an invite</Button>
+          <Button className={classes.wereInBetaButton}>Get an invite <ArrowRightAltIcon /></Button>
         </Grid>
       </Grid>
     </Grid>
