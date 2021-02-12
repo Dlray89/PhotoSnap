@@ -2,7 +2,6 @@ import React from 'react';
 import {Link } from 'react-router-dom'
 import {makeStyles, Grid, Button, Hidden, useTheme, useMediaQuery} from '@material-ui/core'
 import Logo from '../../assets/shared/desktop/logoWhite.svg'
-import ArrowRightAltIcon from '@material-ui/icons/ArrowRightAlt';
 
 import Facebook from '../../assets/shared/desktop/facebook.svg'
 import Instagram from '../../assets/shared/desktop/instagram.svg'
