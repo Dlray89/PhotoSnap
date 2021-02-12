@@ -146,14 +146,7 @@ const Footer = () => {
     const theme = useTheme()
     const matchSM = useMediaQuery(theme.breakpoints.down('sm'))
 
-    // const tabletLinks = (
-    //     <Grid className={classes.linksContainer} item container direction='column' justify='space-evenly' alignItems='center'>
-    //     <Grid item className={classes.links} component={Link}>Home</Grid>
-    //     <Grid item className={classes.links} component={Link}>Stories</Grid>
-    //     <Grid item className={classes.links} component={Link}> Features</Grid>
-    //     <Grid item className={classes.links} component={Link}>Pricing</Grid>
-    // </Grid>
-    // )
+  
     return(
         <Grid container direction={matchSM ? 'column' : 'row'} justify='space-between' alignItems='center' className={classes.footer}>
             <Grid item container direction='row' justify='space-evenly' alignItems='center' className={classes.firstContainer}>
